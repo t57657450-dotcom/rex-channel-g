@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World War Strategy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌍 WORLD WAR STRATEGY</div>
+
+  <nav id="nav" class="hidden">
+    <button onclick="page('home')">🏠 خانه</button>
+    <button onclick="page('assets')">🎒 دارایی من</button>
+    <button onclick="page('shop')">🛒 فروشگاه</button>
+    <button onclick="page('war')">⚔️ جنگ</button>
+    <button onclick="page('map')">🌍 نقشه</button>
+    <button onclick="page('missions')">🎯 مأموریت</button>
+    <button onclick="page('statements')">📜 بیانیه</button>
+    <button onclick="page('settings')">⚙️ تنظیمات</button>
+    <button onclick="logout()">خروج</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="login">
+
+<div class="box">
+<h2>ورود</h2>
+
+<input id="loginUser" placeholder="نام کاربری">
+<input id="loginPass" type="password" placeholder="رمز عبور">
+
+<button onclick="login()">ورود</button>
+
+<hr>
+
+<h2>ثبت‌نام</h2>
+
+<input id="regUser" placeholder="نام کاربری">
+<input id="regPass" type="password" placeholder="رمز عبور">
+
+<select id="regCountry"></select>
+
+<button onclick="register()">ساخت حساب</button>
+
+<p id="authMessage"></p>
+</div>
+
+<div class="box">
+<h2>🛡️ ورود ادمین</h2>
+
+<input id="adminUser" placeholder="آیدی">
+<input id="adminPass" type="password" placeholder="رمز">
+
+<button onclick="adminLogin()">ورود ادمین</button>
+</div>
+
+</section>
+
+<section id="game" class="hidden">
+
+<div id="stats" class="grid"></div>
+
+<div id="home" class="page"></div>
+
+<div id="assets" class="page hidden"></div>
+
+<div id="shop" class="page hidden"></div>
+
+<div id="war" class="page hidden"></div>
+
+<div id="map" class="page hidden"></div>
+
+<div id="missions" class="page hidden"></div>
+
+<div id="statements" class="page hidden"></div>
+
+<div id="settings" class="page hidden"></div>
+
+</section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+  </html>
