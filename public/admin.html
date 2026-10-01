@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>پنل مدیریت</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🛡️ پنل مدیریت World War Strategy</div>
+
+  <nav>
+    <button onclick="loadUsers()">👥 کاربران</button>
+    <button onclick="loadCountries()">🌍 کشورها</button>
+    <button onclick="loadSettings()">⚙️ تنظیمات</button>
+    <button onclick="logoutAdmin()">🚪 خروج</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="adminMessage" class="message">
+    در حال بارگذاری پنل...
+  </section>
+
+  <section class="box">
+    <h2>👥 مدیریت کاربران</h2>
+    <div id="users"></div>
+  </section>
+
+  <section class="box">
+    <h2>🌍 مدیریت کشورها</h2>
+    <div id="countries"></div>
+  </section>
+
+  <section class="box">
+    <h2>⚙️ تنظیمات جنگ</h2>
+
+    <label>
+      حداکثر اختلاف قدرت مجاز:
+    </label>
+
+    <input
+      id="allowedDifference"
+      type="number"
+      placeholder="مثلاً 500"
+    >
+
+    <button onclick="saveSettings()">
+      💾 ذخیره تنظیمات
+    </button>
+
+    <div id="settingsMessage"></div>
+  </section>
+
+  <section class="box">
+    <h2>🔐 تغییر رمز ادمین</h2>
+
+    <input
+      id="newAdminPassword"
+      type="password"
+      placeholder="رمز جدید"
+    >
+
+    <button onclick="changeAdminPassword()">
+      تغییر رمز
+    </button>
+
+    <div id="passwordMessage"></div>
+  </section>
+
+</main>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
