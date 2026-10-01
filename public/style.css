@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+body {
+  background: #0b1020;
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  background: #111936;
+  border-bottom: 1px solid #27345f;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  background: #24345f;
+  color: white;
+  border: 1px solid #3b4f88;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover {
+  background: #31509a;
+  transform: translateY(-1px);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  margin: 7px 0;
+  background: #151e3b;
+  color: white;
+  border: 1px solid #35436f;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #5878d8;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.box {
+  background: #111936;
+  border: 1px solid #27345f;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+}
+
+#login {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+#game {
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: #111936;
+  border: 1px solid #27345f;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.stat-title {
+  color: #9da9ce;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.stat-value {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.page {
+  background: #111936;
+  border: 1px solid #27345f;
+  border-radius: 14px;
+  padding: 20px;
+  min-height: 300px;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 15px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #2c3961;
+  margin: 20px 0;
+}
+
+.card {
+  background: #151e3b;
+  border: 1px solid #303f6d;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.card strong {
+  color: #fff;
+}
+
+.card small {
+  color: #aab4d1;
+}
+
+.country-grid,
+.unit-grid,
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.country,
+.unit,
+.shop-item {
+  background: #151e3b;
+  border: 1px solid #303f6d;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.country.active {
+  border-color: #4caf50;
+}
+
+.country.inactive {
+  opacity: .55;
+}
+
+.price {
+  color: #ffd54a;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.power {
+  color: #ff7676;
+}
+
+.defense {
+  color: #72b7ff;
+}
+
+.success {
+  color: #59d98e;
+  margin-top: 10px;
+}
+
+.error {
+  color: #ff7272;
+  margin-top: 10px;
+}
+
+.warning {
+  color: #ffd15c;
+  margin-top: 10px;
+}
+
+.info {
+  color: #72b7ff;
+}
+
+.war-box {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.war-side {
+  background: #151e3b;
+  border: 1px solid #303f6d;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.vs {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffcc55;
+}
+
+.map {
+  min-height: 450px;
+  background:
+    radial-gradient(circle at 20% 30%, #263a72 0 2%, transparent 3%),
+    radial-gradient(circle at 60% 50%, #263a72 0 2%, transparent 3%),
+    linear-gradient(135deg, #10182f, #17254a);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #30416f;
+}
+
+.map-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 12px;
+  border-radius: 8px;
+  background: #151e3b;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #303d66;
+  text-align: center;
+}
+
+th {
+  background: #182345;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  nav button {
+    flex: 1 1 45%;
+    font-size: 12px;
+  }
+
+  .war-box {
+    grid-template-columns: 1fr;
+  }
+
+  .vs {
+    text-align: center;
+  }
+
+  .page {
+    padding: 13px;
+  }
+  }
